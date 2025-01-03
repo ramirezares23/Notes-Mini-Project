@@ -2,15 +2,11 @@
 
 <?php require('partials/nav.php') ?>
 
-<?php require('partials/banner.php') ?>
-
 <main>
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <p class="mb-6">
-      <a href="/notes" class="text-blue-500 hover:underline">Volver al listado</a>
-    </p>
+    <h1 class="text-2xl font-bold">No estas autorizado para ver esta pagina.</h1>
     <p>
-      <?= $note['body'] ?>
+        <a href="/" class="text-blue underline">Volver a la pagina de inicio</a>
     </p>
   </div>
 </main>

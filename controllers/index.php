@@ -1,5 +1,9 @@
 <?php
 
+$_SESSION["name"] = "Ares";
+
 $heading = 'Home';
 
-require "views/index.view.php";
+view("index.view.php", [
+    "heading"=> $heading
+]);
