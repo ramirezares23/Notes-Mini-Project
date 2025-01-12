@@ -2,14 +2,14 @@
 
 use Core\App;
 use Core\Database;
-use Core\Contanier;
+use Core\Container;
 
-$contanier = new Contanier();
+$container = new Container();
 
-$contanier->bind('Core\Database', function () {
+$container->bind('Core\Database', function () {
     $config = require base_path('config.php');
 
     return new Database($config['database'], $config['username'], $config['password']);
 });
 
-App::setContanier($contanier);
+App::setContainer($container);

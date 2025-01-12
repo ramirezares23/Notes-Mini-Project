@@ -2,7 +2,7 @@
 
 namespace Core;
 
-class Contanier
+class Container
 {
     protected $bindings = [];
     public function bind($key, $resolver)
@@ -12,7 +12,7 @@ class Contanier
     public function resolve($key)
     {
         if (!array_key_exists($key, $this->bindings)) {
-            throw new \Exception("No se encontraron Vinculaciones para " . $key);
+            throw new \Exception("No se encontraron vinculaciones para " . $key);
         }
 
         $resolver = $this->bindings[$key];
